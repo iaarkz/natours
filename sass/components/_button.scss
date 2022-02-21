@@ -22,7 +22,7 @@
   }
 
   &:hover {
-    box-shadow: 0 0.625rem 1.875rem rgba($color-black, 0.2);
+    box-shadow: $shadow-small rgba($color-black, 0.2);
     transform: translateY(-3px);
 
     &::after {
@@ -32,7 +32,7 @@
   }
 
   &:active {
-    box-shadow: 0 0.3125rem 0.9375rem rgba($color-black, 0.2);
+    box-shadow: $shadow-small-active rgba($color-black, 0.2);
     transform: translateY(-1px);
   }
 
@@ -69,13 +69,13 @@
   &:hover {
     background-color: $color-primary;
     border-radius: 100px;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    box-shadow: $shadow-bttn rgba($color-black, 0.15);
     color: $color-white;
     padding: 0.7rem 2rem;
     transform: translateY(-2px);
   }
   &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    box-shadow: $shadow-bttn-active rgba($color-black, 0.15);
     transform: translateY(0px);
   }
 }
