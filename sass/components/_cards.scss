@@ -103,7 +103,7 @@
     width: 75%;
   }
   &__heading-span {
-    // -webkit-box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; // breaking the code maybe?
     box-decoration-break: clone;
     padding: 1rem 1.5rem;
     &--1 {
