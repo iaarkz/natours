@@ -194,6 +194,14 @@ body {
   margin-bottom: 8rem !important;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
 .btn:link, .btn:visited {
   border-radius: 10rem;
   cursor: pointer;
@@ -214,6 +222,15 @@ body {
 
 .btn--white::after {
   background-color: #fff;
+}
+
+.btn--green {
+  color: #fff;
+  background-color: #55c57a;
+}
+
+.btn--green::after {
+  background-color: #55c57a;
 }
 
 .btn:hover {
@@ -287,11 +304,11 @@ body {
 }
 
 .card {
-  height: 50rem;
+  height: 52rem;
   -webkit-perspective: 150rem;
           perspective: 150rem;
-  -moz-perspective: 150rem;
   position: relative;
+  -moz-perspective: 150rem;
 }
 
 .card__side {
@@ -300,8 +317,9 @@ body {
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  height: 50rem;
+  height: 52rem;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 0;
   -webkit-transition: all 0.8s ease;
@@ -334,13 +352,117 @@ body {
 }
 
 .card:hover .card__side--front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 .card:hover .card__side--back {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+
+.card__picture {
+  background-blend-mode: screen;
+  background-size: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  height: 23rem;
+}
+
+.card__picture--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+
+.card__picture--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
+}
+
+.card__picture--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
+}
+
+.card__heading {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 300;
+  position: absolute;
+  right: 2rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 12rem;
+  width: 75%;
+}
+
+.card__heading-span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 1rem 1.5rem;
+}
+
+.card__heading-span--1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.85)), to(rgba(255, 119, 48, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.85)), to(rgba(86, 67, 250, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
+
+.card__details {
+  padding: 3rem;
+}
+
+.card__details ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.card__details ul li {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.card__price-box {
+  color: #fff;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.card__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6rem;
+  font-weight: 300;
 }
 
 .composition {
@@ -469,7 +591,7 @@ body {
   background-position: top;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
   position: relative;
 }
@@ -516,7 +638,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -11.4rem;
 }
 /*# sourceMappingURL=main.css.map */
